@@ -1,0 +1,47 @@
+server:
+  #确定端口
+  port: 8081
+spring:
+
+  mvc:
+    view:
+      #确定jsp在哪
+      prefix: /WEB-INF/jspdir/
+      suffix: .jsp
+  datasource:
+    #对数据库的一些配置
+    type: com.alibaba.druid.pool.DruidDataSource
+
+    #这是远程数据库
+    #url: jdbc:mysql://121.199.42.126:3306/second_hand_house?serverTimezone=UTC&characterEncoding=utf-8
+
+    #这是本地数据库，本地数据库和远程分开演示
+    url: jdbc:mysql://127.0.0.1:3306/second_hand_house?serverTimezone=UTC&characterEncoding=utf-8
+    username: root
+    password: cloudpan_7_O
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    tomcat:
+      max-active: 20
+      max-idle: 8
+      min-idle: 8
+      initial-size: 10
+
+  #配置邮件
+  mail:
+    #    host: smtp.163.com
+    port: 587
+    username: 782506171@qq.com
+    #    password: VQCRFVJLVMORVYLI
+    default-encoding: UTF-8
+    protocol: smtp
+    host: smtp.qq.com
+    password: croqtwirlvqgbcff
+
+
+
+#分页的配置
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+
